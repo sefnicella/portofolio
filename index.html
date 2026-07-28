@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sefni Marcella Pratiwi | Portfolio Pendidikan Teknologi Informasi UNESA</title>
+  <meta name="description" content="Portfolio Sefni Marcella Pratiwi, Mahasiswa Pendidikan Teknologi Informasi UNESA (IPK 3.88). Ahli dalam administrasi, pengelolaan data, Figma prototype, dan koordinasi kegiatan.">
+  <meta name="theme-color" content="#4F46E5">
+
+  <!-- OpenGraph SEO -->
+  <meta property="og:title" content="Portfolio Sefni Marcella Pratiwi - IT Education & Data Admin">
+  <meta property="og:description" content="Portfolio Claymorphism interaktif Sefni Marcella Pratiwi, UNESA IPK 3.88. Pengalaman magang SMCC UNESA & BPBD Surabaya.">
+  <meta property="og:type" content="website">
+
+  <!-- Phosphor Icons (Vector SVG Icons) -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Claymorphism CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Canvas for Celebration Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Floating Background Clay Shapes -->
+  <div class="bg-clay-shape shape-1"></div>
+  <div class="bg-clay-shape shape-2"></div>
+  <div class="bg-clay-shape shape-3"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header>
+    <nav class="navbar" id="navbar" aria-label="Navigasi Utama">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="ph-bold ph-graduation-cap"></i>
+        </div>
+        <span>Sefni.clay</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#education" class="nav-link">Pendidikan</a></li>
+        <li><a href="#experience" class="nav-link">Magang</a></li>
+        <li><a href="#organization" class="nav-link">Organisasi</a></li>
+        <li><a href="#skills" class="nav-link">Skill Simulator</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Sound FX Toggle -->
+        <button class="icon-btn" id="sound-toggle-btn" aria-label="Toggle Efek Suara" title="Toggle Suara">
+          <i class="ph-bold ph-speaker-high" id="sound-icon"></i>
+        </button>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Tema">
+          <i class="ph-bold ph-moon-stars" id="theme-icon"></i>
+        </button>
+
+        <button class="clay-button primary nav-cta open-contact-btn" data-subject="Tawaran Kerja / Kerjasama">
+          <i class="ph-bold ph-paper-plane-tilt"></i> Hubungi Sefni
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION (SATU-SATUNYA GAMBAR UTAMA) -->
+  <section class="section hero" id="about">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="section-badge hero-badge">
+            <i class="ph-bold ph-sparkle"></i> 🎓 S1 Pendidikan Teknologi Informasi UNESA • IPK 3.88
+          </div>
+
+          <h1 class="hero-title">
+            Sefni Marcella <br>
+            <span class="sparkle-text">Pratiwi</span>
+          </h1>
+
+          <p class="hero-description">
+            Mahasiswa semester 8 Program Studi Pendidikan Teknologi Informasi <strong>Universitas Negeri Surabaya</strong> (IPK 3,88). Memiliki pengalaman kuat dalam administrasi, pengolahan data, UI prototype Figma, serta koordinasi kegiatan.
+          </p>
+
+          <!-- Contact Quick Pill -->
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px;">
+            <span class="clay-badge"><i class="ph-bold ph-map-pin"></i> Mojokerto, Jawa Timur</span>
+            <span class="clay-badge"><i class="ph-bold ph-phone"></i> 081555662510</span>
+            <span class="clay-badge"><i class="ph-bold ph-envelope"></i> sefnicella077@gmail.com</span>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#experience" class="clay-button">
+              <i class="ph-bold ph-briefcase"></i> Lihat Magang & Pengalaman
+            </a>
+            <button class="clay-button secondary open-contact-btn" data-subject="Peluang Karir / Diskusi">
+              <i class="ph-bold ph-chats-teardrop"></i> Hubungi Saya
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">3.88</span>
+              <span class="stat-label">IPK Cumlaude</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2+ Magang</span>
+              <span class="stat-label">SMCC & BPBD</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+ Event</span>
+              <span class="stat-label">Organisasi FT UNESA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAKTU-SATUNYA GAMBAR UTAMA PORTFOLIO -->
+        <div class="hero-media">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/sefni_clay_avatar.jpg" alt="Sefni Marcella Pratiwi - 3D Clay Character Avatar" class="hero-mascot-img">
+          </div>
+
+          <!-- Levitating Clay Badges -->
+          <div class="floating-clay-card float-badge-1">
+            <div class="badge-icon fire">
+              <i class="ph-bold ph-file-text"></i>
+            </div>
+            <div class="badge-info">
+              <h4>Administrasi & LPJ</h4>
+              <p>Pengarsipan Sistematis</p>
+            </div>
+          </div>
+
+          <div class="floating-clay-card float-badge-2">
+            <div class="badge-icon star">
+              <i class="ph-bold ph-figma-logo"></i>
+            </div>
+            <div class="badge-info">
+              <h4>Figma & UI Prototype</h4>
+              <p>Evaluasi BPBD Surabaya</p>
+            </div>
+          </div>
+
+          <div class="floating-clay-card float-badge-3">
+            <div class="badge-icon trophy">
+              <i class="ph-bold ph-users-three"></i>
+            </div>
+            <div class="badge-info">
+              <h4>Pendamping 130 Maba</h4>
+              <p>PKKMB FT UNESA 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDIDIKAN & REKAP KUALIFIKASI -->
+  <section class="section about" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-bold ph-student"></i> Pendidikan & Prestasi Akademik
+        </div>
+        <h2 class="section-title">Latar Belakang <span class="highlight">Pendidikan</span></h2>
+        <p class="section-desc">Pendidikan Teknologi Informasi UNESA dengan fokus pada administrasi data, analisis kebutuhan pengguna, dan pengembangan antarmuka.</p>
+      </div>
+
+      <div class="demo-dashboard" style="margin-bottom: 40px;">
+        <div class="demo-body" style="grid-template-columns: 1.2fr 1fr;">
+          <!-- Card Pendidikan UNESA -->
+          <div class="progress-card-box">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+              <span class="clay-badge" style="background: var(--color-surface); color: var(--color-primary); font-weight: 700;">Aug 2022 - Jul 2026</span>
+              <span class="clay-badge" style="background: var(--color-mint); color: white; font-weight: 700;">IPK: 3.88 / 4.00</span>
+            </div>
+            <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 6px;">Universitas Negeri Surabaya</h3>
+            <p style="font-size: 1.1rem; color: var(--color-primary-dark); font-weight: 700; margin-bottom: 16px;">
+              Bachelor of Information Technology Education (S1 Pendidikan Teknologi Informasi)
+            </p>
+            <p style="color: var(--color-text-muted); margin-bottom: 20px; font-size: 1.02rem;">
+              Terbiasa mengolah data administrasi secara cermat, menyusun dokumentasi teknis & LPJ kegiatan, serta melakukan prototype antarmuka pengguna berbasis UI/UX.
+            </p>
+
+            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px;">Pelatihan & Organisasi Akademik:</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 10px; background: var(--color-surface); padding: 10px 16px; border-radius: 12px; font-weight: 600;">
+                <i class="ph-bold ph-certificate" style="color: var(--color-sun);"></i>
+                <span>LKMM TD (Latihan Keterampilan Manajemen Mahasiswa Tingkat Dasar) 2023</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; background: var(--color-surface); padding: 10px 16px; border-radius: 12px; font-weight: 600;">
+                <i class="ph-bold ph-code" style="color: var(--color-primary);"></i>
+                <span>Bootcamp WebDev 2023</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 10px; background: var(--color-surface); padding: 10px 16px; border-radius: 12px; font-weight: 600;">
+                <i class="ph-bold ph-users-three" style="color: var(--color-mint);"></i>
+                <span>Fungsionaris Badan Eksekutif Mahasiswa Fakultas Teknik UNESA 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Matriks Hard & Soft Skills -->
+          <div class="badges-container">
+            <div class="badges-header">Kemampuan Utama:</div>
+            
+            <p style="font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; margin-bottom: 10px; color: var(--color-primary);">Hard Skills:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+              <span class="clay-badge">Microsoft Word</span>
+              <span class="clay-badge">Microsoft Excel</span>
+              <span class="clay-badge">Microsoft PowerPoint</span>
+              <span class="clay-badge">Google Workspace</span>
+              <span class="clay-badge">Google Forms</span>
+              <span class="clay-badge">Canva</span>
+              <span class="clay-badge">Figma</span>
+            </div>
+
+            <p style="font-family: var(--font-heading); font-weight: 700; font-size: 0.95rem; margin-bottom: 10px; color: var(--color-accent);">Soft Skills:</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="clay-badge">Kerja Sama Tim</span>
+              <span class="clay-badge">Adaptif</span>
+              <span class="clay-badge">Manajemen Waktu</span>
+              <span class="clay-badge">Teliti</span>
+              <span class="clay-badge">Bertanggung Jawab</span>
+              <span class="clay-badge">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENGALAMAN MAGANG (DENGAN VAKTOR CLAY ICON TANPA GAMBAR TAMBAHAN) -->
+  <section class="section catalog" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-bold ph-briefcase"></i> Pengalaman Magang
+        </div>
+        <h2 class="section-title">Magang & <span class="highlight">Pengalaman Kerja</span></h2>
+        <p class="section-desc">Pengalaman nyata dalam administrasi, pengelolaan data, analisis sistem, dan prototype UI.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-category="all">
+          <i class="ph-bold ph-squares-four"></i> Semua Magang
+        </button>
+        <button class="filter-btn" data-category="smcc">
+          <i class="ph-bold ph-buildings"></i> SMCC UNESA
+        </button>
+        <button class="filter-btn" data-category="bpbd">
+          <i class="ph-bold ph-shield-check"></i> BPBD Kota Surabaya
+        </button>
+      </div>
+
+      <!-- Grid Cards Magang dengan Clay Icon Header (Tanpa Gambar Tambahan) -->
+      <div class="courses-grid" id="projects-grid">
+        <!-- Magang 1: SMCC UNESA -->
+        <div class="clay-card course-card" data-category="smcc">
+          <div class="course-thumb-container" style="background: linear-gradient(135deg, #4F46E5 0%, #818CF8 100%); display: flex; align-items: center; justify-content: center; color: white;">
+            <i class="ph-bold ph-buildings" style="font-size: 4.5rem; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));"></i>
+            <span class="course-level-badge">Aug 2024 - Dec 2024 • Surabaya</span>
+            <button class="course-fav-btn" aria-label="Favorit Magang"><i class="ph-bold ph-heart"></i></button>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span class="course-meta-item"><i class="ph-bold ph-buildings"></i> SMCC UNESA</span>
+              <span class="course-meta-item"><i class="ph-bold ph-user-gear"></i> Intern / Anggota Magang</span>
+            </div>
+            <h3 class="course-title">SMCC UNESA - Subdirektorat Mitigasi Crisis Center</h3>
+            <p class="course-desc">Mengelola administrasi & pengarsipan dokumen sistematis, menginput data berkala, menyusun LPJ kegiatan, serta mendukung evaluasi (Monev) prodi.</p>
+            
+            <div class="course-rating-row">
+              <div class="rating-stars">
+                <i class="ph-fill ph-star"></i> 5.0 <span>(Administrasi & Monev)</span>
+              </div>
+              <div class="course-instructor">
+                <div class="instructor-avatar">SM</div>
+                <span class="instructor-name">Surabaya, ID</span>
+              </div>
+            </div>
+            <div class="course-footer">
+              <button class="clay-button primary course-btn open-project-modal" data-project-id="smcc">
+                Detail Tanggung Jawab <i class="ph-bold ph-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Magang 2: BPBD Kota Surabaya -->
+        <div class="clay-card course-card" data-category="bpbd">
+          <div class="course-thumb-container" style="background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%); display: flex; align-items: center; justify-content: center; color: white;">
+            <i class="ph-bold ph-shield-check" style="font-size: 4.5rem; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));"></i>
+            <span class="course-level-badge">Oct 2024 • Surabaya</span>
+            <button class="course-fav-btn" aria-label="Favorit Magang"><i class="ph-bold ph-heart"></i></button>
+          </div>
+          <div class="course-content">
+            <div class="course-meta">
+              <span class="course-meta-item"><i class="ph-bold ph-shield-check"></i> BPBD Kota Surabaya</span>
+              <span class="course-meta-item"><i class="ph-bold ph-figma-logo"></i> UI Prototype & Evaluasi</span>
+            </div>
+            <h3 class="course-title">BPBD Kota Surabaya - Analisis & Prototype System</h3>
+            <p class="course-desc">Melakukan analisis kebutuhan pengguna sistem, menyusun dokumentasi aplikasi, membuat laporan evaluasi hasil pengujian, dan mendesain prototype antarmuka Figma.</p>
+            
+            <div class="course-rating-row">
+              <div class="rating-stars">
+                <i class="ph-fill ph-star"></i> 5.0 <span>(Figma & Evaluasi)</span>
+              </div>
+              <div class="course-instructor">
+                <div class="instructor-avatar">BP</div>
+                <span class="instructor-name">Surabaya, ID</span>
+              </div>
+            </div>
+            <div class="course-footer">
+              <button class="clay-button primary course-btn open-project-modal" data-project-id="bpbd">
+                Detail Tanggung Jawab <i class="ph-bold ph-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PENGALAMAN ORGANISASI -->
+  <section class="section" id="organization" style="background: var(--color-surface-tint);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-bold ph-tree-structure"></i> Kepemimpinan & Organisasi
+        </div>
+        <h2 class="section-title">Pengalaman <span class="highlight">Organisasi</span></h2>
+        <p class="section-desc">Aktif berkontribusi dalam kepengurusan BEM FT UNESA dan kepanitiaan event tingkat fakultas & universitas.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Organisasi 1: Staff BEM FT UNESA -->
+        <div class="clay-card testimonial-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="clay-badge" style="background: var(--color-surface); color: var(--color-primary);">Mar 2024 - Dec 2024</span>
+            <span class="clay-badge" style="background: var(--color-bg); font-weight: 700;">BEM FT UNESA</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">Staff Departemen Seni dan Olahraga</h3>
+          <p class="testimonial-quote" style="font-style: normal; font-size: 0.98rem; margin-bottom: 16px;">
+            Berpartisipasi dalam perencanaan & pelaksanaan proker departemen, berkoordinasi dengan pihak internal/eksternal, serta mendukung kemitraan event fakultas.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #FCE7F3;">🎨</div>
+            <div class="author-details">
+              <h4>BEM Fakultas Teknik UNESA</h4>
+              <p>Surabaya, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organisasi 2: EFASCO 2024 Sekretaris -->
+        <div class="clay-card testimonial-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="clay-badge" style="background: var(--color-surface); color: var(--color-primary);">Nov 2024 - Dec 2024</span>
+            <span class="clay-badge" style="background: var(--color-sun); color: #1E1B4B; font-weight: 700;">Sekretaris</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">EFASCO 2024 (Sport Competition)</h3>
+          <p class="testimonial-quote" style="font-style: normal; font-size: 0.98rem; margin-bottom: 16px;">
+            Menyusun administrasi surat-menyurat, pengarsipan dokumen, proposal kegiatan, serta menyusun Laporan Pertanggungjawaban (LPJ) kegiatan secara menyeluruh.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #FEF3C7;">📝</div>
+            <div class="author-details">
+              <h4>EFASCO FT UNESA 2024</h4>
+              <p>Surabaya, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organisasi 3: WAFO Maba FT UNESA 2024 -->
+        <div class="clay-card testimonial-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="clay-badge" style="background: var(--color-surface); color: var(--color-primary);">Mar 2024 - Aug 2024</span>
+            <span class="clay-badge" style="background: var(--color-mint); color: white; font-weight: 700;">Sie Kesekretariatan</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">WAFO (Warung Informasi) Maba FT 2024</h3>
+          <p class="testimonial-quote" style="font-style: normal; font-size: 0.98rem; margin-bottom: 16px;">
+            Mengumpulkan & merekap data mahasiswa baru menggunakan Google Forms & Microsoft Excel, memverifikasi akurasi data administrasi peserta.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #D1FAE5;">📊</div>
+            <div class="author-details">
+              <h4>WAFO FT UNESA 2024</h4>
+              <p>Surabaya, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organisasi 4: PKKMB UNESA 2026 -->
+        <div class="clay-card testimonial-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="clay-badge" style="background: var(--color-surface); color: var(--color-primary);">Aug 2026</span>
+            <span class="clay-badge" style="background: var(--color-purple); color: white; font-weight: 700;">Sie Pendamping</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">PKKMB FT & Universitas UNESA 2026</h3>
+          <p class="testimonial-quote" style="font-style: normal; font-size: 0.98rem; margin-bottom: 16px;">
+            Mendampingi 130 mahasiswa baru selama rangkaian PKKMB, membantu proses adaptasi kampus, serta membangun komunikasi kondusif peserta-panitia.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #EDE9FE;">🤝</div>
+            <div class="author-details">
+              <h4>PKKMB FT & UNESA 2026</h4>
+              <p>Surabaya, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organisasi 5: LKMM-TM FT UNESA 2024 -->
+        <div class="clay-card testimonial-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="clay-badge" style="background: var(--color-surface); color: var(--color-primary);">Sep 2024 - Oct 2024</span>
+            <span class="clay-badge" style="background: var(--color-cyan); color: white; font-weight: 700;">Sie Acara</span>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">LKMM-TM FT UNESA 2024</h3>
+          <p class="testimonial-quote" style="font-style: normal; font-size: 0.98rem; margin-bottom: 16px;">
+            Menyusun buku panduan kegiatan, mengontrol jadwal & timeline acara, koordinasi narasumber, dan bertindak sebagai timekeeper.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background: #CFFAFE;">⏱️</div>
+            <div class="author-details">
+              <h4>LKMM-TM FT UNESA 2024</h4>
+              <p>Surabaya, Indonesia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULATOR PRODUCTIVITY & SKILL SIMULATOR -->
+  <section class="section demo-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-bold ph-lightning"></i> Interaktif Skill Simulator
+        </div>
+        <h2 class="section-title">Uji Simulasi Produktivitas <span class="highlight">Sefni</span></h2>
+        <p class="section-desc">Klik tombol tugas di bawah ini untuk melihat simulasi penyelesaian tugas administrasi & data Sefni secara real-time!</p>
+      </div>
+
+      <div class="demo-dashboard">
+        <!-- Dashboard Header -->
+        <div class="demo-header">
+          <div class="user-profile-summary">
+            <div class="user-avatar-clay">
+              👩‍🎓
+              <span class="level-badge-float">Lvl <span id="user-level-num">4</span></span>
+            </div>
+            <div class="user-info-text">
+              <h3>Sefni Marcella Pratiwi</h3>
+              <p>Admin & Data Specialist • IPK 3.88</p>
+            </div>
+          </div>
+
+          <div class="demo-stats-pills">
+            <div class="demo-pill">
+              <i class="ph-bold ph-lightning" style="color: var(--color-sun);"></i>
+              <span>Total XP:</span>
+              <span class="pill-val" id="user-xp-val">1,450 XP</span>
+            </div>
+            <div class="demo-pill">
+              <div class="badge-icon fire" style="width:24px; height:24px; font-size:0.9rem;">
+                <i class="ph-bold ph-fire"></i>
+              </div>
+              <span>Streak:</span>
+              <span class="pill-val" id="user-streak-val">100% Teliti</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Body -->
+        <div class="demo-body">
+          <!-- Progress Simulator Box -->
+          <div class="progress-card-box">
+            <div class="progress-label-row">
+              <span>Progress Tugas & Produktivitas</span>
+              <span id="progress-percent-label">65% (650/1000 XP)</span>
+            </div>
+
+            <div class="progress-bar-clay">
+              <div class="progress-fill-clay" id="sim-progress-fill" style="width: 65%;"></div>
+            </div>
+
+            <div class="sim-controls-header">Simulasi Aksi Kerja Sefni:</div>
+            <div class="sim-btn-group">
+              <button class="sim-action-btn" id="sim-task-1">
+                <span><i class="ph-bold ph-file-spreadsheet"></i> Rekap Data Maba (Excel & Forms)</span>
+                <span class="xp-tag">+150 XP</span>
+              </button>
+              <button class="sim-action-btn" id="sim-task-2">
+                <span><i class="ph-bold ph-folder-notch-open"></i> Susun Pengarsipan Dokumen & LPJ</span>
+                <span class="xp-tag">+250 XP</span>
+              </button>
+              <button class="sim-action-btn" id="sim-task-3">
+                <span><i class="ph-bold ph-figma-logo"></i> Design Prototype UI Aplikasi Figma</span>
+                <span class="xp-tag">+300 XP</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Badges Grid Showcase -->
+          <div class="badges-container">
+            <div class="badges-header">Achievement Badge Sefni:</div>
+            <div class="badges-grid" id="badges-grid">
+              <div class="badge-item-clay" title="Unlocked!">
+                <div class="badge-icon-large">📊</div>
+                <div class="badge-title">Master Data</div>
+              </div>
+              <div class="badge-item-clay" title="Unlocked!">
+                <div class="badge-icon-large">📑</div>
+                <div class="badge-title">Arsiparis LPJ</div>
+              </div>
+              <div class="badge-item-clay" title="Unlocked!">
+                <div class="badge-icon-large">🎨</div>
+                <div class="badge-title">Figma UI</div>
+              </div>
+              <div class="badge-item-clay locked" id="badge-master" title="Locked - Selesaikan tugas!">
+                <div class="badge-icon-large">🏆</div>
+                <div class="badge-title">Admin Expert</div>
+              </div>
+              <div class="badge-item-clay locked" id="badge-genius" title="Locked - Capai 2000 XP!">
+                <div class="badge-icon-large">🧠</div>
+                <div class="badge-title">Problem Solver</div>
+              </div>
+              <div class="badge-item-clay locked" id="badge-legend" title="Locked - Level 5 diperlukan!">
+                <div class="badge-icon-large">👑</div>
+                <div class="badge-title">UNESA Star</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK QUIZ MICRO-WIDGET -->
+      <div class="quiz-box" id="quiz">
+        <div class="quiz-info">
+          <div class="section-badge" style="margin-bottom: 12px;">
+            <i class="ph-bold ph-brain"></i> Quiz Administrasi & IT
+          </div>
+          <h3>Uji Pengetahuan Administrasi Data!</h3>
+          <p>Jawab pertanyaan berikut untuk membuka badge apresiasi langsung!</p>
+        </div>
+
+        <div class="quiz-options-wrapper">
+          <div style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; margin-bottom: 14px;">
+            Pertanyaan: Tools mana yang digunakan Sefni untuk mengumpulkan & merekap 130+ data maba?
+          </div>
+          <div class="quiz-options">
+            <button class="quiz-opt-btn" data-correct="false">A) Microsoft Paint</button>
+            <button class="quiz-opt-btn" data-correct="true">B) Google Forms & MS Excel</button>
+            <button class="quiz-opt-btn" data-correct="false">C) Notepad ++</button>
+            <button class="quiz-opt-btn" data-correct="false">D) Command Prompt</button>
+          </div>
+        </div>
+
+        <div class="quiz-reward-msg" id="quiz-reward">
+          <span>🎉 Benar Sekali! Sefni sangat mahir mengolah data secara akurat & cepat!</span>
+          <button class="clay-button sun open-contact-btn" data-subject="Apresiasi Portfolio Quiz" style="padding: 6px 16px; font-size: 0.9rem;">
+            Kirim Apresiasi
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK & HUBUNGI SEFNI -->
+  <section class="section pricing" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="ph-bold ph-envelope"></i> Kontak & Kerjasama
+        </div>
+        <h2 class="section-title">Mari <span class="highlight">Bekerja Sama</span></h2>
+        <p class="section-desc">Terbuka untuk posisi Administrasi, Data Management, UI/UX Junior, Staff Support, dan Peluang Karir Professional.</p>
+      </div>
+
+      <div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <!-- Contact Card 1 -->
+        <div class="clay-card pricing-card">
+          <h3 class="plan-name">Administrasi & Data</h3>
+          <p class="plan-desc">Pengelolaan data, LPJ, pengarsipan sistematis & surat-menyurat.</p>
+          
+          <div class="plan-price-box">
+            <span class="plan-price-num" style="font-size: 2rem;">🟢 Siap Kerja</span>
+          </div>
+
+          <div class="plan-features">
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Pengolahan MS Excel & Forms</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Penyusunan LPJ & Proposal</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Pengarsipan Sistematis</span>
+            </div>
+          </div>
+
+          <button class="clay-button primary open-contact-btn" data-subject="Tawaran Posisi Administrasi / Data">
+            Hubungi Sefni <i class="ph-bold ph-paper-plane-tilt"></i>
+          </button>
+        </div>
+
+        <!-- Contact Card 2 -->
+        <div class="clay-card pricing-card featured" style="background: var(--clay-card-indigo);">
+          <div class="popular-ribbon">⭐ Rekomendasi</div>
+          <h3 class="plan-name">UI/UX Prototype Figma</h3>
+          <p class="plan-desc">Analisis kebutuhan pengguna, prototype Figma & laporan evaluasi.</p>
+          
+          <div class="plan-price-box">
+            <span class="plan-price-num" style="font-size: 2rem;">Figma & IT</span>
+          </div>
+
+          <div class="plan-features">
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Prototype Wireframe Figma</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Analisis Pengguna & Evaluasi</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Dokumentasi Aplikasi</span>
+            </div>
+          </div>
+
+          <button class="clay-button primary open-contact-btn" data-subject="Tawaran Project UI Prototype / IT">
+            Kirim Pesan <i class="ph-bold ph-chat-circle"></i>
+          </button>
+        </div>
+
+        <!-- Contact Card 3 -->
+        <div class="clay-card pricing-card">
+          <h3 class="plan-name">Event & Event Support</h3>
+          <p class="plan-desc">Koordinasi acara, sie kesekretariatan, pendampingan maba.</p>
+          
+          <div class="plan-price-box">
+            <span class="plan-price-num" style="font-size: 2rem;">Pengalaman 5+</span>
+          </div>
+
+          <div class="plan-features">
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Kerja Sama Tim & Adaptif</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Timekeeper & Schedule Flow</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-check"><i class="ph-bold ph-check"></i></div>
+              <span>Komunikasi Berbagai Pihak</span>
+            </div>
+          </div>
+
+          <button class="clay-button secondary open-contact-btn" data-subject="Diskusi Project / Event">
+            Diskusi Bersama
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">
+              <i class="ph-bold ph-graduation-cap"></i>
+            </div>
+            <span>Sefni Marcella Pratiwi</span>
+          </a>
+          <p>Pendidikan Teknologi Informasi UNESA (IPK 3.88). Berkomitmen memberikan kontribusi terbaik dalam administrasi, pengelolaan data, dan koordinasi.</p>
+          <div class="social-clay-links">
+            <a href="mailto:sefnicella077@gmail.com" class="icon-btn" aria-label="Email"><i class="ph-bold ph-envelope-simple"></i></a>
+            <a href="tel:081555662510" class="icon-btn" aria-label="Telepon"><i class="ph-bold ph-phone"></i></a>
+            <a href="#" class="icon-btn" aria-label="Lokasi"><i class="ph-bold ph-map-pin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <div class="footer-links">
+            <a href="#about" class="footer-link">Tentang Saya</a>
+            <a href="#education" class="footer-link">Pendidikan UNESA</a>
+            <a href="#experience" class="footer-link">Magang SMCC & BPBD</a>
+            <a href="#organization" class="footer-link">Pengalaman Organisasi</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Keahlian Utama</h4>
+          <div class="footer-links">
+            <a href="#skills" class="footer-link">Pengelolaan Data Excel</a>
+            <a href="#skills" class="footer-link">Administrasi Dokumen & LPJ</a>
+            <a href="#skills" class="footer-link">Prototype Figma</a>
+            <a href="#skills" class="footer-link">Koordinasi & Problem Solving</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak Sefni</h4>
+          <div class="footer-links">
+            <a href="mailto:sefnicella077@gmail.com" class="footer-link">sefnicella077@gmail.com</a>
+            <a href="tel:081555662510" class="footer-link">081555662510</a>
+            <a href="#" class="footer-link">Mojokerto, Jawa Timur</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sefni Marcella Pratiwi. All rights reserved. Built with Claymorphism Magic.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DETAIL MAGANG MODAL -->
+  <div class="modal-overlay" id="course-modal">
+    <div class="modal-clay-content">
+      <button class="modal-close-btn" id="close-course-modal" aria-label="Tutup Modal">&times;</button>
+      <div id="course-modal-body">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT & HIRE MODAL -->
+  <div class="modal-overlay" id="enroll-modal">
+    <div class="modal-clay-content">
+      <button class="modal-close-btn" id="close-enroll-modal" aria-label="Tutup Modal">&times;</button>
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div class="section-badge" style="margin-bottom: 8px;">
+          <i class="ph-bold ph-paper-plane-tilt"></i> Kirim Pesan / Tawaran
+        </div>
+        <h3 style="font-size: 1.8rem; font-weight: 700;">Hubungi Sefni Marcella Pratiwi</h3>
+        <p style="color: var(--color-text-muted);">Topik: <strong id="modal-selected-plan" style="color: var(--color-primary);">Tawaran Kerja / Kerjasama</strong></p>
+      </div>
+
+      <form id="enrollment-form">
+        <div class="clay-input-group">
+          <label class="clay-label" for="parent-name">Nama Anda / Perusahaan</label>
+          <input type="text" class="clay-input" id="parent-name" placeholder="Contoh: Bpk. Hendra / PT Mitra Utama" required>
+        </div>
+
+        <div class="clay-input-group">
+          <label class="clay-label" for="parent-email">Alamat Email Kontak</label>
+          <input type="email" class="clay-input" id="parent-email" placeholder="hendra@perusahaan.com" required>
+        </div>
+
+        <div class="clay-input-group">
+          <label class="clay-label" for="project-details">Pesan / Detail Peluang Karir</label>
+          <textarea class="clay-input" id="project-details" rows="3" placeholder="Tuliskan pesan atau detail penawaran kerjasama di sini..." style="resize: none;"></textarea>
+        </div>
+
+        <button type="submit" class="clay-button primary" style="width: 100%; margin-top: 12px;">
+          Kirim Pesan ke Sefni <i class="ph-bold ph-paper-plane-tilt"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
