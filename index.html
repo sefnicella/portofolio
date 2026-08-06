@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portofolio - Sefni Marcella Pratiwi</title>
   
-  <!-- Google Fonts & Icons -->
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- AOS CSS (Library Animasi Scroll) -->
+  <!-- AOS CSS (Animation on Scroll) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <style>
@@ -43,20 +43,22 @@
       overflow-x: hidden;
     }
 
-    /* Glassmorphism / Claymorphism Card */
+    /* Claymorphism Card Base */
     .clay-card {
       background: var(--clay-bg);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--clay-border);
       border-radius: 24px;
       box-shadow: var(--clay-shadow);
       padding: 2rem;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .clay-card:hover {
       border-color: rgba(168, 85, 247, 0.4);
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(168, 85, 247, 0.15);
     }
 
     .container {
@@ -65,7 +67,7 @@
       padding: 0 1.5rem;
     }
 
-    /* Navigation */
+    /* Header & Navigation */
     header {
       position: fixed;
       top: 0;
@@ -139,13 +141,57 @@
       box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
     }
 
-    /* Hero Section */
+    /* Social Sidebar Style (seperti portofolio Irsyad) */
+    .social-sidebar {
+      position: fixed;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      z-index: 90;
+    }
+
+    .social-sidebar a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--clay-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s;
+      backdrop-filter: blur(8px);
+    }
+
+    .social-sidebar a:hover {
+      background: var(--secondary);
+      color: #fff;
+      transform: scale(1.15);
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+    }
+
+    /* Hero Section Layout (Gaya Layout Dual Column dengan Banner & Greeting) */
     .hero {
       padding: 160px 0 100px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 3rem;
       align-items: center;
+    }
+
+    .greeting-subtitle {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .badge-ipk {
@@ -166,7 +212,7 @@
       font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     .hero h1 span {
@@ -175,9 +221,16 @@
       -webkit-text-fill-color: transparent;
     }
 
+    .hero-role {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 1.2rem;
+    }
+
     .hero p {
       color: var(--text-muted);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-bottom: 2rem;
     }
 
@@ -217,29 +270,20 @@
       color: var(--text-muted);
     }
 
-    .avatar-wrapper {
-      position: relative;
-      text-align: center;
-    }
-
-    .avatar-box {
-      width: 280px;
-      height: 280px;
-      margin: 0 auto;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 6rem;
-      color: white;
-      box-shadow: 0 0 50px rgba(168, 85, 247, 0.3);
-    }
-
-    /* Section Header */
+    /* Section Title */
     .section-title {
       text-align: center;
       margin-bottom: 4rem;
+    }
+
+    .section-title span {
+      color: var(--secondary);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: 0.5rem;
     }
 
     .section-title h2 {
@@ -247,42 +291,81 @@
       font-weight: 800;
     }
 
-    .section-title h2 span {
+    .section-title h2 font {
       color: var(--secondary);
     }
 
-    .section-title p {
-      color: var(--text-muted);
-      margin-top: 0.5rem;
+    /* Skills Progress Bars (seperti milik Irsyad) */
+    .skills-grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
     }
 
-    /* Skills Badges */
-    .skills-wrapper {
+    .skill-progress-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-info {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 1rem;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
     }
 
-    .skill-badge {
+    .skill-bar-bg {
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 8px 16px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 500;
+      height: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--clay-border);
     }
 
-    /* Timeline / Pengalaman */
-    .timeline {
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+    }
+
+    /* Services Grid (Gaya Portofolio Irsyad) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1.2rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Experience Timeline Cards */
+    .experience-grid {
       display: grid;
       gap: 2rem;
     }
 
     .experience-card h3 {
       font-size: 1.3rem;
-      margin-bottom: 0.3rem;
       color: #fff;
+      margin-bottom: 0.3rem;
     }
 
     .experience-role {
@@ -299,7 +382,7 @@
     }
 
     .experience-list {
-      list-style-type: none;
+      list-style: none;
     }
 
     .experience-list li {
@@ -318,9 +401,9 @@
       font-weight: bold;
     }
 
-    /* Interactive Skill Simulator */
+    /* Skill Simulator Section */
     .simulator-box {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       background: rgba(15, 23, 42, 0.6);
       padding: 2rem;
       border-radius: 20px;
@@ -378,7 +461,11 @@
       margin-top: 5rem;
     }
 
-    @media (max-width: 768px) {
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .social-sidebar {
+        display: none;
+      }
       .hero {
         grid-template-columns: 1fr;
         text-align: center;
@@ -386,18 +473,23 @@
       .contact-info-list {
         justify-content: center;
       }
-      .quiz-options {
+      .skills-grid-container {
         grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Floating Social Media Sidebar (Inspirasi Irsyad Kamal) -->
+  <div class="social-sidebar">
+    <a href="mailto:sefnicella077@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://wa.me/6281555662510" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+  </div>
+
+  <!-- Header / Navigasi -->
   <header>
     <div class="container">
       <nav>
@@ -405,10 +497,12 @@
           <i class="fa-solid fa-gem"></i> Sefni.<span>clay</span>
         </a>
         <ul class="nav-links">
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#education">Pendidikan</a></li>
-          <li><a href="#experience">Pengalaman Magang</a></li>
-          <li><a href="#simulator">Skill Simulator</a></li>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#about-detail">Tentang</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#experience">Pengalaman</a></li>
+          <li><a href="#simulator">Simulator</a></li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
         <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
@@ -416,15 +510,19 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Kombinasi Sefni x Irsyad Layout) -->
   <section class="container hero" id="about">
     <div data-aos="fade-right" data-aos-duration="1000">
+      <div class="greeting-subtitle">Hello, I'm</div>
+      <h1>Sefni Marcella <br><span>Pratiwi</span></h1>
+      <div class="hero-role">Admin Data & Graphic Designer</div>
+
       <div class="badge-ipk">
         <i class="fa-solid fa-graduation-cap"></i> IPK 3.88 / 4.00 • Universitas Negeri Surabaya
       </div>
-      <h1>Sefni Marcella <br><span>Pratiwi</span></h1>
+
       <p>
-        Spesialis <strong>Admin Data</strong> & <strong>Graphic Designer</strong>. Memiliki keahlian kuat dalam pengarsipan sistematis, analisis kebutuhan sistem, pembuatan prototype antarmuka Figma, dan pengelolaan data administrasi.
+        Memiliki latar belakang kuat di bidang administrasi data, penyusunan LPJ sistematis, serta perancangan visual prototype antarmuka menggunakan Figma & Canva.
       </p>
 
       <div class="contact-info-list">
@@ -433,7 +531,10 @@
         <span><i class="fa-solid fa-phone"></i> 081555662510</span>
       </div>
 
-      <a href="#experience" class="btn btn-primary"><i class="fa-solid fa-briefcase"></i> Lihat Pengalaman Magang</a>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://wa.me/6281555662510" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Saya</a>
+        <a href="#experience" class="btn" style="background: rgba(255,255,255,0.08); color: #fff;"><i class="fa-solid fa-briefcase"></i> Lihat Pengalaman</a>
+      </div>
 
       <div class="stats-grid">
         <div class="clay-card stat-card" data-aos="zoom-in" data-aos-delay="200">
@@ -451,42 +552,107 @@
       </div>
     </div>
 
-    <div class="avatar-wrapper" data-aos="fade-left" data-aos-duration="1000">
-      <div class="avatar-box">
-        <i class="fa-solid fa-user-astronaut"></i>
+    <div style="text-align: center;" data-aos="fade-left" data-aos-duration="1000">
+      <div class="clay-card" style="padding: 3rem 1.5rem; display: inline-block; width: 100%; max-width: 360px;">
+        <div style="width: 180px; height: 180px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-size: 4.5rem; color: #fff; box-shadow: 0 0 40px rgba(168,85,247,0.4);">
+          <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+        <h3 style="margin-bottom: 0.3rem;">Sefni Marcella P.</h3>
+        <p style="color: var(--accent); font-size: 0.9rem; font-weight: 600;">UNESA 2026 Grad</p>
       </div>
     </div>
   </section>
 
-  <!-- Pendidikan & Skills -->
-  <section class="container" id="education" style="padding: 80px 0;">
+  <!-- Skills Progress Bars (Inspirasi Irsyad) -->
+  <section class="container" id="skills" style="padding: 80px 0;">
     <div class="section-title" data-aos="fade-up">
-      <h2>Pendidikan & <span>Keahlian</span></h2>
-      <p>Latar belakang akademis serta penguasaan perangkat lunak utama</p>
+      <span>My Skills</span>
+      <h2>Keahlian & <span>Tingkat Penguasaan</span></h2>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-      <div class="clay-card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fa-solid fa-university" style="font-size: 2rem; color: var(--secondary); margin-bottom: 1rem;"></i>
-        <h3>Universitas Negeri Surabaya (UNESA)</h3>
-        <p style="color: var(--accent); margin-bottom: 1rem;">Lulusan Berprestasi • IPK 3.88</p>
-        <p style="color: var(--text-muted);">
-          Terbiasa mengolah data administrasi secara cermat, menyusun laporan pertanggungjawaban (LPJ), serta mendesain antarmuka & materi visual yang komunikatif.
-        </p>
+    <div class="skills-grid-container">
+      <div class="clay-card" data-aos="fade-right">
+        <div class="skill-progress-item">
+          <div class="skill-info">
+            <span>Microsoft Excel & Data Entry</span>
+            <span>95%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%;"></div></div>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-info">
+            <span>Microsoft Word & Pengarsipan LPJ</span>
+            <span>92%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%;"></div></div>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-info">
+            <span>Canva Visual & Banner Design</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-info">
+            <span>Figma UI/UX Prototype</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%;"></div></div>
+        </div>
       </div>
 
-      <div class="clay-card" data-aos="fade-up" data-aos-delay="400">
-        <h3>Software & Keahlian Utama</h3>
-        <p style="color: var(--text-muted); margin-bottom: 1rem;">Tools & Aplikasi yang Dikuasai:</p>
-        <div class="skills-wrapper">
-          <span class="skill-badge"><i class="fa-solid fa-file-word"></i> MS Word</span>
-          <span class="skill-badge"><i class="fa-solid fa-file-excel"></i> MS Excel</span>
-          <span class="skill-badge"><i class="fa-solid fa-file-powerpoint"></i> MS PowerPoint</span>
-          <span class="skill-badge"><i class="fa-brands fa-google"></i> Google Workspace</span>
-          <span class="skill-badge"><i class="fa-solid fa-list-check"></i> Google Forms</span>
-          <span class="skill-badge"><i class="fa-solid fa-palette"></i> Canva</span>
-          <span class="skill-badge"><i class="fa-brands fa-figma"></i> Figma</span>
+      <div class="clay-card" data-aos="fade-left">
+        <h3 style="margin-bottom: 1rem;">Tools & Workspace</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          Memanfaatkan kombinasi software perkantoran dan desain untuk menghasilkan laporan administrasi yang rapi serta visual antarmuka yang menarik.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-solid fa-file-word"></i> MS Word</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-solid fa-file-excel"></i> MS Excel</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-solid fa-file-powerpoint"></i> MS PowerPoint</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-brands fa-google"></i> Google Workspace</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-solid fa-list-check"></i> Google Forms</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-solid fa-palette"></i> Canva</span>
+          <span style="background: rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 12px; font-size: 0.9rem;"><i class="fa-brands fa-figma"></i> Figma</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layanan / Services (Inspirasi Irsyad Kamal) -->
+  <section class="container" id="services" style="padding: 80px 0;">
+    <div class="section-title" data-aos="fade-up">
+      <span>Our Services</span>
+      <h2>Layanan <span>Profesional</span></h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="clay-card service-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-file-signature"></i>
+        <h3>Administrasi & LPJ</h3>
+        <p>Penyusunan laporan pertanggungjawaban, pengarsipan surat-menyurat, dan pengelolaan data berkala.</p>
+      </div>
+
+      <div class="clay-card service-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Data Management</h3>
+        <p>Rekapitulasi data skala besar via MS Excel & Google Forms dengan ketelitian tinggi.</p>
+      </div>
+
+      <div class="clay-card service-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-brands fa-figma"></i>
+        <h3>UI Prototype Figma</h3>
+        <p>Analisis kebutuhan sistem dan pembuatan rancangan antarmuka pengguna (UI/UX) interaktif.</p>
+      </div>
+
+      <div class="clay-card service-card" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Graphic Design</h3>
+        <p>Pembuatan visual branding, materi presentasi PowerPoint, serta konten promosi/banner Canva.</p>
       </div>
     </div>
   </section>
@@ -494,13 +660,12 @@
   <!-- Pengalaman Magang -->
   <section class="container" id="experience" style="padding: 80px 0;">
     <div class="section-title" data-aos="fade-up">
+      <span>Experience</span>
       <h2>Pengalaman <span>Magang</span></h2>
-      <p>Pengalaman nyata dalam pengelolaan administrasi data dan analisis UI/UX</p>
     </div>
 
-    <div class="timeline">
-      <!-- Magang 1 -->
-      <div class="clay-card experience-card" data-aos="fade-up" data-aos-duration="800">
+    <div class="experience-grid">
+      <div class="clay-card" data-aos="fade-up">
         <h3>Subdirektorat Mitigasi Crisis Center (SMCC) UNESA</h3>
         <div class="experience-role">Anggota Magang / Intern</div>
         <div class="experience-date"><i class="fa-regular fa-calendar"></i> Aug 2024 - Dec 2024 • Surabaya, Indonesia</div>
@@ -513,8 +678,7 @@
         </ul>
       </div>
 
-      <!-- Magang 2 -->
-      <div class="clay-card experience-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="clay-card" data-aos="fade-up" data-aos-delay="200">
         <h3>Badan Penanggulangan Bencana Daerah (BPBD) Kota Surabaya</h3>
         <div class="experience-role">Anggota Magang / Intern (UI Prototype & Evaluasi)</div>
         <div class="experience-date"><i class="fa-regular fa-calendar"></i> Oct 2024 • Surabaya, Indonesia</div>
@@ -531,17 +695,17 @@
   <!-- Skill Simulator -->
   <section class="container" id="simulator" style="padding: 80px 0;">
     <div class="section-title" data-aos="fade-up">
-      <h2>Interaktif <span>Skill Simulator</span></h2>
-      <p>Simulasi produktivitas kerja dan uji pengetahuan administrasi Sefni</p>
+      <span>Interactive</span>
+      <h2>Skill <span>Simulator</span></h2>
     </div>
 
-    <div class="clay-card" data-aos="zoom-in-up">
-      <h3>Simulasi Produktivitas Administrasi</h3>
-      <p style="color: var(--text-muted);">Klik tombol aksi di bawah untuk mensimulasikan penyelesaian tugas!</p>
-      
+    <div class="clay-card" data-aos="zoom-in">
+      <h3>Simulasi Produktivitas Kerja</h3>
+      <p style="color: var(--text-muted);">Klik tombol di bawah untuk mencoba simulasi pengolahan tugas Sefni:</p>
+
       <div class="simulator-box">
         <div style="display: flex; justify-content: space-between;">
-          <span>Progress & Produktivitas</span>
+          <span>Progress Task</span>
           <span id="xp-text">400 / 1000 XP</span>
         </div>
         <div class="progress-bar-bg">
@@ -557,10 +721,10 @@
       </div>
 
       <div style="margin-top: 2rem;">
-        <h4><i class="fa-solid fa-circle-question"></i> Mini Quiz:</h4>
-        <p style="color: var(--text-muted); margin-top: 0.5rem;">Tools manakah yang digunakan Sefni untuk mendesain prototype antarmuka sistem di BPBD Surabaya?</p>
+        <h4><i class="fa-solid fa-circle-question"></i> Mini Quiz Administrasi:</h4>
+        <p style="color: var(--text-muted); margin-top: 0.5rem;">Software apa yang digunakan Sefni saat magang di BPBD Surabaya untuk merancang UI Prototype?</p>
         <div class="quiz-options">
-          <button class="quiz-btn" onclick="checkAnswer(false)">A. Microsoft Word</button>
+          <button class="quiz-btn" onclick="checkAnswer(false)">A. MS Word</button>
           <button class="quiz-btn" onclick="checkAnswer(true)">B. Figma</button>
           <button class="quiz-btn" onclick="checkAnswer(false)">C. Google Forms</button>
           <button class="quiz-btn" onclick="checkAnswer(false)">D. MS Excel</button>
@@ -570,32 +734,39 @@
     </div>
   </section>
 
-  <!-- Kontak -->
+  <!-- Section Kontak -->
   <section class="container" id="contact" style="padding: 80px 0;">
     <div class="clay-card" style="text-align: center; padding: 4rem 2rem;" data-aos="flip-up">
-      <h2>Mari <span>Bekerja Sama</span></h2>
-      <p style="color: var(--text-muted); margin: 1rem 0 2rem;">
-        Terbuka untuk tawaran posisi Administrasi Data, Graphic Designer, Staff Support, dan Peluang Karir Professional lainnya.
+      <div class="section-title" style="margin-bottom: 1.5rem;">
+        <span>Connect With Us</span>
+        <h2>Mari <span>Bekerja Sama</span></h2>
+      </div>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Terbuka untuk posisi Administrasi Data, Graphic Designer, Staff Support, dan Peluang Karir Professional.
       </p>
-      <a href="mailto:sefnicella077@gmail.com" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
-        <i class="fa-solid fa-paper-plane"></i> Kirim Pesan Email
-      </a>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="mailto:sefnicella077@gmail.com" class="btn btn-primary" style="font-size: 1rem; padding: 0.9rem 2rem;">
+          <i class="fa-solid fa-paper-plane"></i> Kirim Email
+        </a>
+        <a href="https://wa.me/6281555662510" class="btn" style="background: rgba(255,255,255,0.08); color: #fff; font-size: 1rem; padding: 0.9rem 2rem;">
+          <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>© 2026 Sefni Marcella Pratiwi. All rights reserved. Built with Claymorphism Magic.</p>
+      <p>© 2026 Sefni Marcella Pratiwi. All rights reserved. Created with Claymorphism Magic.</p>
     </div>
   </footer>
 
-  <!-- AOS JS Script (Mengatur Efek Animasi Scroll) -->
+  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    // Inisialisasi AOS Animasi Scroll
     AOS.init({
-      once: false, // Animasi akan berulang setiap kali di-scroll ke atas/bawah
-      duration: 800, // Durasi animasi (milidetik)
+      once: false,
+      duration: 800,
     });
 
     let currentXP = 400;
