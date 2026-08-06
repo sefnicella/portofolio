@@ -176,7 +176,7 @@
       box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
     }
 
-    /* Hero Section Layout (Gaya Layout Dual Column dengan Banner & Greeting) */
+    /* Hero Section */
     .hero {
       padding: 160px 0 100px;
       display: grid;
@@ -291,11 +291,11 @@
       font-weight: 800;
     }
 
-    .section-title h2 font {
+    .section-title h2 span {
       color: var(--secondary);
     }
 
-    /* Skills Progress Bars*/
+    /* Skills Progress Bars (Inspirasi Irsyad) */
     .skills-grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -328,7 +328,7 @@
       border-radius: 10px;
     }
 
-    /* Services Grid (Gaya Portofolio Irsyad) */
+    /* Services Grid */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -354,6 +354,78 @@
     .service-card p {
       color: var(--text-muted);
       font-size: 0.9rem;
+    }
+
+    /* Section Portfolio Grid (GitHub Links) */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--secondary);
+    }
+
+    .portfolio-thumb {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: var(--secondary);
+      margin-bottom: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover .portfolio-thumb {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+    }
+
+    .portfolio-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+    }
+
+    .portfolio-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .portfolio-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .portfolio-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--secondary);
     }
 
     /* Experience Timeline Cards */
@@ -485,8 +557,7 @@
   <div class="social-sidebar">
     <a href="mailto:sefnicella077@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
     <a href="https://wa.me/6281555662510" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://github.com/sefnicella077" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
   </div>
 
   <!-- Header / Navigasi -->
@@ -494,13 +565,13 @@
     <div class="container">
       <nav>
         <a href="#" class="logo">
-          <i class="fa-solid fa-gem"></i> Sefni.<span>portofolio </span>
+          <i class="fa-solid fa-sparkles"></i> Sefni.<span>design</span>
         </a>
         <ul class="nav-links">
           <li><a href="#about">Home</a></li>
-          <li><a href="#about-detail">Tentang</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#services">Layanan</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#experience">Pengalaman</a></li>
           <li><a href="#simulator">Simulator</a></li>
           <li><a href="#contact">Kontak</a></li>
@@ -533,7 +604,7 @@
 
       <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
         <a href="https://wa.me/6281555662510" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Saya</a>
-        <a href="#experience" class="btn" style="background: rgba(255,255,255,0.08); color: #fff;"><i class="fa-solid fa-briefcase"></i> Lihat Pengalaman</a>
+        <a href="#portfolio" class="btn" style="background: rgba(255,255,255,0.08); color: #fff;"><i class="fa-solid fa-folder-open"></i> Lihat Portfolio</a>
       </div>
 
       <div class="stats-grid">
@@ -558,12 +629,12 @@
           <i class="fa-solid fa-user-astronaut"></i>
         </div>
         <h3 style="margin-bottom: 0.3rem;">Sefni Marcella P.</h3>
-        <p style="color: var(--accent); font-size: 0.9rem; font-weight: 600;">UNESA 2026 Grad</p>
+        <p style="color: var(--accent); font-size: 0.9rem; font-weight: 600;">UNESA Lulusan Berprestasi</p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Progress Bars (Inspirasi Irsyad) -->
+  <!-- Skills Progress Bars -->
   <section class="container" id="skills" style="padding: 80px 0;">
     <div class="section-title" data-aos="fade-up">
       <span>My Skills</span>
@@ -623,7 +694,7 @@
     </div>
   </section>
 
-  <!-- Layanan / Services (Inspirasi Irsyad Kamal) -->
+  <!-- Layanan / Services -->
   <section class="container" id="services" style="padding: 80px 0;">
     <div class="section-title" data-aos="fade-up">
       <span>Our Services</span>
@@ -654,6 +725,61 @@
         <h3>Graphic Design</h3>
         <p>Pembuatan visual branding, materi presentasi PowerPoint, serta konten promosi/banner Canva.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Section Portfolio (Langsung Nyambung ke GitHub) -->
+  <section class="container" id="portfolio" style="padding: 80px 0;">
+    <div class="section-title" data-aos="fade-up">
+      <span>Our Recent Work</span>
+      <h2>Proyek & <span>Portofolio</span></h2>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Proyek 1 -->
+      <a href="https://github.com/sefnicella077/bpbd-surabaya-ui" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="100">
+        <div>
+          <div class="portfolio-thumb">
+            <i class="fa-brands fa-figma"></i>
+          </div>
+          <span class="portfolio-tag">UI/UX Prototype</span>
+          <h3>Analisis & Prototype BPBD Surabaya</h3>
+          <p>Perancangan antarmuka sistem penanggulangan bencana dan laporan evaluasi pengguna di BPBD Surabaya.</p>
+        </div>
+        <div class="portfolio-link-btn">
+          <span>Lihat di GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- Proyek 2 -->
+      <a href="https://github.com/sefnicella077/smcc-unesa-lpj" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <div class="portfolio-thumb">
+            <i class="fa-solid fa-file-excel"></i>
+          </div>
+          <span class="portfolio-tag">Data Management</span>
+          <h3>Pengarsipan & LPJ SMCC UNESA</h3>
+          <p>Sistem rekapitulasi data administrasi berkala dan pengarsipan LPJ kegiatan mitigasi krisis.</p>
+        </div>
+        <div class="portfolio-link-btn">
+          <span>Lihat di GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <!-- Proyek 3 -->
+      <a href="https://github.com/sefnicella077/canva-branding-design" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <div class="portfolio-thumb">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <span class="portfolio-tag">Graphic Design</span>
+          <h3>Materi Visual & Branding Canva</h3>
+          <p>Kumpulan desain poster, slide presentasi PowerPoint, dan banner promosi event kampus.</p>
+        </div>
+        <div class="portfolio-link-btn">
+          <span>Lihat di GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
     </div>
   </section>
 
