@@ -249,7 +249,7 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
       margin-top: 2.5rem;
     }
@@ -328,35 +328,7 @@
       border-radius: 10px;
     }
 
-    /* Services Grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-    }
-
-    .service-card i {
-      font-size: 2.5rem;
-      color: var(--secondary);
-      margin-bottom: 1.2rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .service-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* Section Portfolio Grid (GitHub Links) */
+    /* Section Portfolio Grid */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -473,58 +445,6 @@
       font-weight: bold;
     }
 
-    /* Skill Simulator Section */
-    .simulator-box {
-      margin-top: 1.5rem;
-      background: rgba(15, 23, 42, 0.6);
-      padding: 2rem;
-      border-radius: 20px;
-      border: 1px solid var(--clay-border);
-    }
-
-    .progress-bar-bg {
-      background: rgba(255, 255, 255, 0.1);
-      height: 16px;
-      border-radius: 10px;
-      overflow: hidden;
-      margin: 1rem 0;
-    }
-
-    .progress-bar-fill {
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      height: 100%;
-      width: 40%;
-      transition: width 0.5s ease;
-    }
-
-    .sim-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-
-    .quiz-options {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .quiz-btn {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--clay-border);
-      color: white;
-      padding: 12px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .quiz-btn:hover {
-      background: rgba(168, 85, 247, 0.2);
-    }
-
     footer {
       border-top: 1px solid var(--clay-border);
       padding: 3rem 0;
@@ -556,7 +476,7 @@
   <!-- Floating Social Media Sidebar -->
   <div class="social-sidebar">
     <a href="mailto:sefnicella077@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://wa.me/6281555662510" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://wa.me/6281555662510" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
     <a href="https://github.com/sefnicella" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
   </div>
 
@@ -565,7 +485,7 @@
     <div class="container">
       <nav>
         <a href="#" class="logo">
-          <i class="fa-solid fa-sparkles"></i> Sefni.portofolio</span>
+          <i class="fa-solid fa-sparkles"></i> Sefni.<span>portofolio</span>
         </a>
         <ul class="nav-links">
           <li><a href="#about">Home</a></li>
@@ -591,7 +511,7 @@
       </div>
 
       <p>
-       Berpengalaman dalam pengelolaan administrasi data, penyusunan Laporan Pertanggungjawaban (LPJ) yang terstruktur, serta perancangan antarmuka visual menggunakan Figma dan Canva.
+        Berpengalaman dalam pengelolaan administrasi data, penyusunan Laporan Pertanggungjawaban (LPJ) yang terstruktur, serta perancangan antarmuka visual menggunakan Figma dan Canva.
       </p>
 
       <div class="contact-info-list">
@@ -601,7 +521,7 @@
       </div>
 
       <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="https://wa.me/6281555662510" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Saya</a>
+        <a href="https://wa.me/6281555662510" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Saya</a>
         <a href="#portfolio" class="btn" style="background: rgba(255,255,255,0.08); color: #fff;"><i class="fa-solid fa-folder-open"></i> Lihat Portfolio</a>
       </div>
 
@@ -684,7 +604,7 @@
     </div>
   </section>
 
-  <!-- Section Portfolio (Langsung Nyambung ke GitHub) -->
+  <!-- Section Portfolio -->
   <section class="container" id="portfolio" style="padding: 80px 0;">
     <div class="section-title" data-aos="fade-up">
       <span>Our Recent Work</span>
@@ -692,7 +612,7 @@
     </div>
 
     <div class="portfolio-grid">
-      <!-- Proyek 1 -->
+      <!-- Proyek 1: Figma BPBD -->
       <a href="https://www.figma.com/design/Ec1lCvgIDsRcgHyyGTH48n/Desain-Web-BPBD" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="100">
         <div>
           <div class="portfolio-thumb">
@@ -703,37 +623,41 @@
           <p>Perancangan antarmuka sistem BPBD Surabaya.</p>
         </div>
         <div class="portfolio-link-btn">
+          <span>Lihat di Figma</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </div>
       </a>
 
-     <!-- Proyek 2: Toko Sefni -->
-<a href="https://github.com/sefnicella/toko-sefni" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="200">
-  <div>
-    <div class="portfolio-thumb">
-      <i class="fa-solid fa-shop"></i>
-    </div>
-    <span class="portfolio-tag">Web Application</span>
-    <h3>Toko Sefni</h3>
-    <p>Pengembangan aplikasi web platform toko online untuk pengelolaan katalog produk dan transaksi penjualan.</p>
-  </div>
-  <div class="portfolio-link-btn">
-  </div>
-</a>
+      <!-- Proyek 2: Toko Sefni -->
+      <a href="https://github.com/sefnicella/toko-sefni" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="200">
+        <div>
+          <div class="portfolio-thumb">
+            <i class="fa-solid fa-shop"></i>
+          </div>
+          <span class="portfolio-tag">Web Application</span>
+          <h3>Toko Sefni</h3>
+          <p>Pengembangan aplikasi web platform toko online untuk pengelolaan katalog produk dan transaksi penjualan.</p>
+        </div>
+        <div class="portfolio-link-btn">
+          <span>Lihat di GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
 
-<!-- Proyek 3: System Perpustakaan CRUD -->
-<a href="https://github.com/sefnicella/perpustakaan_crud" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="300">
-  <div>
-    <div class="portfolio-thumb">
-      <i class="fa-solid fa-book-bookmark"></i>
+      <!-- Proyek 3: System Perpustakaan CRUD -->
+      <a href="https://github.com/sefnicella/perpustakaan_crud" target="_blank" class="clay-card portfolio-card" data-aos="fade-up" data-aos-delay="300">
+        <div>
+          <div class="portfolio-thumb">
+            <i class="fa-solid fa-book-bookmark"></i>
+          </div>
+          <span class="portfolio-tag">Database & Web Application</span>
+          <h3>Sistem Perpustakaan CRUD</h3>
+          <p>Aplikasi pengelolaan data perpustakaan berbasis sistem CRUD (Create, Read, Update, Delete) untuk pendataan buku dan peminjaman.</p>
+        </div>
+        <div class="portfolio-link-btn">
+          <span>Lihat di GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
     </div>
-    <span class="portfolio-tag">Database & Web Application</span>
-    <h3>Sistem Perpustakaan CRUD</h3>
-    <p>Aplikasi pengelolaan data perpustakaan berbasis sistem CRUD (Create, Read, Update, Delete) untuk pendataan buku dan peminjaman.</p>
-  </div>
-  <div class="portfolio-link-btn">
-    <span>Lihat di GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-  </div>
-</a>
+  </section>
 
   <!-- Pengalaman Magang -->
   <section class="container" id="experience" style="padding: 80px 0;">
@@ -775,18 +699,23 @@
     <div class="clay-card" style="text-align: center; padding: 4rem 2rem;" data-aos="flip-up">
       <div class="section-title" style="margin-bottom: 1.5rem;">
         <span>Connect With Us</span>
+        <h2>Mari <span>Bekerja Sama</span></h2>
+      </div>
+      <p style="color: var(--text-muted); margin-bottom: 2rem;">
+        Terbuka untuk posisi Administrasi Data, Graphic Designer, Staff Support, dan Peluang Karir Professional.
       </p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
         <a href="mailto:sefnicella077@gmail.com" class="btn btn-primary" style="font-size: 1rem; padding: 0.9rem 2rem;">
           <i class="fa-solid fa-paper-plane"></i> Kirim Email
         </a>
-        <a href="https://wa.me/6281555662510" class="btn" style="background: rgba(255,255,255,0.08); color: #fff; font-size: 1rem; padding: 0.9rem 2rem;">
+        <a href="https://wa.me/6281555662510" target="_blank" class="btn" style="background: rgba(255,255,255,0.08); color: #fff; font-size: 1rem; padding: 0.9rem 2rem;">
           <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
         </a>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2026 Sefni Marcella Pratiwi. All rights reserved. Created with Claymorphism Magic.</p>
@@ -800,30 +729,6 @@
       once: false,
       duration: 800,
     });
-
-    let currentXP = 400;
-    const maxXP = 1000;
-
-    function addXP(amount, message) {
-      currentXP += amount;
-      if (currentXP > maxXP) currentXP = maxXP;
-      
-      const percentage = (currentXP / maxXP) * 100;
-      document.getElementById('xp-bar').style.width = percentage + '%';
-      document.getElementById('xp-text').innerText = `${currentXP} / ${maxXP} XP`;
-      document.getElementById('sim-status').innerText = `✨ Status: ${message}`;
-    }
-
-    function checkAnswer(isCorrect) {
-      const resultText = document.getElementById('quiz-result');
-      if (isCorrect) {
-        resultText.style.color = '#10b981';
-        resultText.innerText = "🎉 Benar sekali! Figma digunakan Sefni untuk merancang UI Prototype sistem!";
-      } else {
-        resultText.style.color = '#ef4444';
-        resultText.innerText = "❌ Coba lagi! Petunjuk: Tools desain UI/UX buatan Figma Inc.";
-      }
-    }
   </script>
 </body>
 </html>
